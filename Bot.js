@@ -49,7 +49,6 @@ client.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     if(!message.content.startsWith(process.env.PREFIX)) return;
-    if(!message.channel.id([`692170744267931659`, `692979006982848562`]) return message.channel.send(`${message.author} | utilize os canais de comandos!)
 
     const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/g)
     const cmd = args.shift().toLowerCase();
