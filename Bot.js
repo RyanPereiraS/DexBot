@@ -292,7 +292,7 @@ client.on('message', async message => {
             .addField("!info", `Temporariamente ativo apenas no servidor de minecraft do bot!`)
             .addField("!serverinfo", `Veja as informações do servidor!`)
             .addField("!nivel", `Veja o seu nível de xp em um servidor`)
-            .addField("!form @user @cargo", `Me utilize para dar cargo a alguem!`)
+            .addField("!form @user @cargo", `Me utilize para dar cargo a alguem.`)
             .addField("!userinfo <@user>", `Veja as informações de algum usuário`)
             .setThumbnail(botimg)
             .setFooter(`Não adianta mandar mensagens no meu privado eu não vou ler ele :D, Todos os diretos reservados à [Dev]UmGamer_ 𝓓𝓚#6687`, botimg)
