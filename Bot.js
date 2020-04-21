@@ -334,7 +334,7 @@ client.on('message', async message =>{
                     nextlevel = snap.val().nivel + 1;
                     database.ref(`Servidores/Levels/${message.guild.id}/${message.author.id}`)
                     .update({
-                        nivel: snap.val().nivel
+                        nivel: nextlevel
                     })
                     
                     let guild = message.guild.name;
@@ -343,7 +343,7 @@ client.on('message', async message =>{
                         .setAuthor(guild)
                         .setDescription("<a:policia:643053729842724875> Subiu de nivel! <a:policia:643053729842724875>")
                         .addField(`${message.author.tag}`, "Subiu de Nivel")
-                        .addField("Novo Nivel:", snap.val().nivel)
+                        .addField("Novo Nivel:", nextlevel)
                         .setThumbnail(img)
                         .setFooter(`${message.author.tag}`, img)
                         .setColor("RANDOM").setTimestamp()
