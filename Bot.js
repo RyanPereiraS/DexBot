@@ -91,7 +91,7 @@ client.on('message', async message => {
         
     }
     if(cmd === "info") {
-        if(!message.guild.id == 685289860449566740) return message.author.send("Comando disponivel apenas no servidor de minecraft!, convite: https://discord.gg/Yj9Zrc5");
+        if(message.guild.id != 685289860449566740) return message.author.send("Comando disponivel apenas no servidor de minecraft!, convite: https://discord.gg/Yj9Zrc5");
         var guild = message.guild.name;
         let img = message.channel.guild.iconURL();
         var embed = new Discord.MessageEmbed()
@@ -321,7 +321,7 @@ client.on('message', async message =>{
                 database.ref(`Servidores/Levels/${message.guild.id}/${message.author.id}`)
                     .set({
                         xp: 0,
-                        nivel: 1
+                        nivel: 0
                     })
             } else {
                 xp = snap.val().xp + pointsAdd;
@@ -334,7 +334,7 @@ client.on('message', async message =>{
                     nextlevel = snap.val().nivel + 1;
                     database.ref(`Servidores/Levels/${message.guild.id}/${message.author.id}`)
                     .update({
-                        nivel: nextlevel
+                        nivel: snap.val().nivel
                     })
                     
                     let guild = message.guild.name;
