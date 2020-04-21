@@ -321,7 +321,7 @@ client.on('message', async message =>{
                 database.ref(`Servidores/Levels/${message.guild.id}/${message.author.id}`)
                     .set({
                         xp: 0,
-                        nivel: 0
+                        nivel: 1
                     })
             } else {
                 xp = snap.val().xp + pointsAdd;
