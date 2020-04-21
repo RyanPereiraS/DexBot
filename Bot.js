@@ -91,7 +91,7 @@ client.on('message', async message => {
         
     }
     if(cmd === "info") {
-        if(message.guild.id !== 685289860449566740) return message.author.send("Comando disponivel apenas no servidor de minecraft!, convite: https://discord.gg/Yj9Zrc5");
+        if(!message.guild.id == 685289860449566740) return message.author.send("Comando disponivel apenas no servidor de minecraft!, convite: https://discord.gg/Yj9Zrc5");
         var guild = message.guild.name;
         let img = message.channel.guild.iconURL();
         var embed = new Discord.MessageEmbed()
