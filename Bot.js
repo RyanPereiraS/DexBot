@@ -118,7 +118,7 @@ client.on('message', async message => {
         let img = message.guild.iconURL();
         let imgauthor = message.author.avatarURL();
         var embed = new Discord.MessageEmbed()
-               .setAuthor(autor)
+                .setAuthor(autor)
                 .setDescription(`<:naoincomodar:624603305451978782> Banido <:naoincomodar:624603305451978782>`)
                 .addField(`Usuário: `, kUser)
                 .addField("Aplicada por: ", `${message.author.tag}`)
@@ -131,7 +131,6 @@ client.on('message', async message => {
         
         
         
-        return;
     }
     if(cmd === "kick") {
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
@@ -156,8 +155,6 @@ client.on('message', async message => {
             message.channel.send(embed);
         message.guild.member(kUser).kick(kReason);
         
-   
-        return;
     }
     if(cmd === "nivel") {
         var guild = message.guild.name;
