@@ -140,7 +140,6 @@ client.on('message', async message => {
         if(!kReason){
             kReason = `Não definido!`
         }
-        if(kUser.id === 416958878467620865) return message.channel.send("Não posso expulsar meu criador!");
         if(!message.member.hasPermission([`ADMINISTRATOR`, `KICK_MEMBERS`])) return message.channel.send("Sem permissão!");
         if(kUser.hasPermission("ADMINISTRATOR")) return message.channel.send("Não posso expulsar este usuário!");
 
