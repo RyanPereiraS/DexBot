@@ -106,10 +106,13 @@ client.on('message', async message => {
         message.channel.send(embed);
         
     }
-    if(cmd === "ban") {
+    if(cmd === "ban2") {
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
         if(!kUser) return message.channel.send("Não encontrei o usuário!");
         let kReason = args.join(" ").slice(22);
+        if(!kReason){
+            kReason = `Não definido!`
+        }
         if(kUser.id === 416958878467620865) return message.channel.send("Não posso banir meu criador!");
         if(!message.member.hasPermission(["BAN_MEMBERS", `ADMINISTRATOR`])) return message.channel.send("Sem permissão!");
         if(kUser.hasPermission("ADMINISTRATOR")) return message.channel.send("Não posso expulsar este usuário!");
@@ -127,16 +130,16 @@ client.on('message', async message => {
                 .setFooter(`${message.author.tag}`, imgauthor)
                 .setColor("RANDOM").setTimestamp()
             message.channel.send(embed);
-        message.guild.member(kUser).ban(kReason);
-        
-        
-        
-        return;
+        kUser.ban(kReason);
+    
     }
-    if(cmd === "kick") {
+    if(cmd === "kick2") {
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
         if(!kUser) return message.channel.send("Não encontrei o usuário!");
         let kReason = args.join(" ").slice(22);
+        if(!kReason){
+            kReason = `Não definido!`
+        }
         if(kUser.id === 416958878467620865) return message.channel.send("Não posso expulsar meu criador!");
         if(!message.member.hasPermission([`ADMINISTRATOR`, `KICK_MEMBERS`])) return message.channel.send("Sem permissão!");
         if(kUser.hasPermission("ADMINISTRATOR")) return message.channel.send("Não posso expulsar este usuário!");
@@ -154,10 +157,8 @@ client.on('message', async message => {
                 .setFooter(`${message.author.tag}`, imgauthor)
                 .setColor("RANDOM").setTimestamp()
             message.channel.send(embed);
-        message.guild.member(kUser).kick(kReason);
-        
-   
-        return;
+        kUser.kick(kReason);
+    
     }
     if(cmd === "nivel") {
         var guild = message.guild.name;
@@ -304,6 +305,7 @@ client.on('message', async message => {
     }
    
 })
+
 // XP/LVL Nunca mais vo mexe kk
 client.on('message', async message =>{
     if(message.author.bot) return;
@@ -353,6 +355,9 @@ client.on('message', async message =>{
             }
         })
 
+})
+
+client.on("guildMemberAdd", (member) => {
 })
 
 client.login(process.env.TOKEN)
