@@ -182,7 +182,7 @@ client.on('message', async message => {
         userinfo.discrim = `${user.discrim}`;
         userinfo.id = user.id;
         userinfo.status = `${user.presence.activities}`;
-        userinfo.registred = moment.utc(message.guild.members.cache.get(user.id).user.createdAt).format("dddd, MMMM de, YYYY");
+        userinfo.registred = moment().diff(user.createdAt, "days");
         userinfo.joinedAt = moment.utc(message.guild.members.cache.get(user.id).user.joinedAt).format("dddd, MMMM de, YYYY");
         let img = message.author.avatarURL()
 
@@ -192,7 +192,7 @@ client.on('message', async message => {
                 .addField(`Nome: `, userinfo.name, true)
                 .addField(`Id: `, userinfo.id, true)
                 .addField(`Status: `, userinfo.status, true)
-                .addField(`Conta criada à`, userinfo.registred, true)
+                .addField(`Conta criada à`, `${userinfo.registred}, Dias`, true)
                 .addField(`Entrou em: `, userinfo.joinedAt, true)
                 .setThumbnail(userinfo.avatar)
                 .setFooter(`${message.author.tag}`, img)
