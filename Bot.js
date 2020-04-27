@@ -106,7 +106,7 @@ client.on('message', async message => {
         message.channel.send(embed);
         
     }
-    if(cmd === "ban2") {
+    if(cmd === "ban") {
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
         if(!kUser) return message.channel.send("Não encontrei o usuário!");
         let kReason = args.join(" ").slice(22);
@@ -133,7 +133,7 @@ client.on('message', async message => {
         kUser.ban(kReason)
 
     }
-    if(cmd === "kick2") {
+    if(cmd === "kick") {
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
         if(!kUser) return message.channel.send("Não encontrei o usuário!");
         let kReason = args.join(" ").slice(22);
