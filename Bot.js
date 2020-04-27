@@ -121,7 +121,7 @@ client.on('message', async message => {
         let img = message.guild.iconURL();
         let imgauthor = message.author.avatarURL();
         var embed = new Discord.MessageEmbed()
-               .setAuthor(autor)
+                .setAuthor(autor)
                 .setDescription(`<:naoincomodar:624603305451978782> Banido <:naoincomodar:624603305451978782>`)
                 .addField(`Usuário: `, kUser)
                 .addField("Aplicada por: ", `${message.author.tag}`)
@@ -130,8 +130,8 @@ client.on('message', async message => {
                 .setFooter(`${message.author.tag}`, imgauthor)
                 .setColor("RANDOM").setTimestamp()
             message.channel.send(embed);
-        kUser.ban(kReason);
-    
+        kUser.ban(kReason)
+
     }
     if(cmd === "kick2") {
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
@@ -157,8 +157,9 @@ client.on('message', async message => {
                 .setFooter(`${message.author.tag}`, imgauthor)
                 .setColor("RANDOM").setTimestamp()
             message.channel.send(embed);
+
         kUser.kick(kReason);
-    
+
     }
     if(cmd === "nivel") {
         var guild = message.guild.name;
@@ -323,7 +324,7 @@ client.on('message', async message =>{
                 database.ref(`Servidores/Levels/${message.guild.id}/${message.author.id}`)
                     .set({
                         xp: 0,
-                        nivel: 0
+                        nivel: 1
                     })
             } else {
                 xp = snap.val().xp + pointsAdd;
@@ -355,9 +356,6 @@ client.on('message', async message =>{
             }
         })
 
-})
-
-client.on("guildMemberAdd", (member) => {
 })
 
 client.login(process.env.TOKEN)
