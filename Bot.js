@@ -20,7 +20,7 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-
+// Client Ready
 client.on('ready', () => {
     client.user.setPresence({ activity: { name: `!ajuda (RedeHeroes.net)`, type: 'STREAMING', url: 'https://www.twitch.tv/redeheroes'}, status: 'online'});
     console.log(`${client.user.username} Diz: Iniciando sistemas!`);
