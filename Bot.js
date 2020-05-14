@@ -348,7 +348,7 @@ client.on('message', async message =>{
                         .setThumbnail(img)
                         .setFooter(`${message.author.tag}`, img)
                         .setColor("RANDOM").setTimestamp()
-                    await message.channel.send(embed);
+                    await message.author.send(embed);
                     console.log(`${message.author.tag}, subiu de nivel em ${message.guild.id}, ${message.guild.name}  ${snap.val().nivel}!`)
                 }   
             }
