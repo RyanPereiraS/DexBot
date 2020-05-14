@@ -250,7 +250,6 @@ client.on('message', async message => {
             .setColor("RANDOM").setTimestamp()
         message.guild.member(usermenc).roles.add(roleid);
         await client.channels.cache.get(`685297377246314521`).send(embed)
-        await client.channels.cache.get(`685297377246314521`).send("@here")
         
     }
     if(cmd === "ajuda"){
