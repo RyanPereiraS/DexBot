@@ -57,6 +57,7 @@ client.on('message', async message => {
     let user = message.mentions.users.first() || message.guild.members.cache.get(args[0]) || message.author;
     let usermenc = message.mentions.users.first() || message.guild.members.cache.get(args[0]);
     let cargomenc = message.mentions.roles.first() || message.guild.roles.cache.get(args[1]);
+    let ownerid = 416958878467620865;
 
     console.log(`${message.author.tag}, usou o comando: | ${cmd} | em ${message.guild.name}, ${message.guild.id}`)
     if(cmd === "ping") {
@@ -109,6 +110,7 @@ client.on('message', async message => {
     if(cmd === "ban") {
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
         if(!kUser) return message.channel.send("Não encontrei o usuário!");
+        if(kUser.id = `416958878467620865`) return message.channel.send("Não posso banir a mim mesmo!")
         let kReason = args.join(" ").slice(22);
         if(!kReason){
             kReason = `Não definido!`
