@@ -7,14 +7,14 @@ moment.locale('pt-BR');
 const firebase = require("firebase");
 
 var config = {
-    apiKey: "AIzaSyAk_Mv9zU05lsPzUjyYWCqBTMPc4m_1_Yc",
-    authDomain: "dex-botryan.firebaseapp.com",
-    databaseURL: "https://dex-botryan.firebaseio.com",
-    projectId: "dex-botryan",
-    storageBucket: "dex-botryan.appspot.com",
-    messagingSenderId: "318796750104",
-    appId: "1:318796750104:web:174eea50a0c1dec233d26d",
-    measurementId: "G-F8FM63MDKS"
+    apiKey: " ",
+    authDomain: " ",
+    databaseURL: " ",
+    projectId: " ",
+    storageBucket: " ",
+    messagingSenderId: " ",
+    appId: " ",
+    measurementId: " "
 };
 firebase.initializeApp(config);
 
@@ -23,16 +23,6 @@ const database = firebase.database();
 // Client Ready
 client.on('ready', () => {
     client.user.setPresence({ activity: { name: `!ajuda (RedeHeroes.net)`, type: 'STREAMING', url: 'https://www.twitch.tv/redeheroes'}, status: 'online'});
-    console.log(`${client.user.username} Diz: Iniciando sistemas!`);
-    console.log(`${client.user.username} Diz: Iniciando database!`);
-    console.log(`${client.user.username} Diz: Coletando dados de xp`);
-    console.log(`${client.user.username} Diz: Coletando dados de niveis`);
-    console.log(`${client.user.username} Diz: Database iniciada!`);
-    console.log(`${client.user.username} Diz: Iniciando comandos!`);
-    console.log(`${client.user.username} Diz: Coletando prefix`);
-    console.log(`${client.user.username} Diz: Coletando comandos`);
-    console.log(`${client.user.username} Diz: Comandos iniciados!`);
-    console.log(`${client.user.username} Diz: Todos os sistemas iniciados!`);
     console.log(`${client.user.username} Diz: Status: Ativo!`);
 })
 
