@@ -7,14 +7,14 @@ moment.locale('pt-BR');
 const firebase = require("firebase");
 
 var config = {
-    apiKey: "",
-    authDomain: "",
-    databaseURL: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: "",
-    appId: "",
-    measurementId: ""
+    apiKey: "APIKEY",
+    authDomain: "AUTH",
+    databaseURL: "URL",
+    projectId: "PROJECTID",
+    storageBucket: "STORAGE",
+    messagingSenderId: "MESSAGINGID",
+    appId: "ID",
+    measurementId: "MEASIREMENTID"
 };
 firebase.initializeApp(config);
 
