@@ -7,14 +7,14 @@ moment.locale('pt-BR');
 const firebase = require("firebase");
 
 var config = {
-    apiKey: "AIzaSyAk_Mv9zU05lsPzUjyYWCqBTMPc4m_1_Yc",
-    authDomain: "dex-botryan.firebaseapp.com",
-    databaseURL: "https://dex-botryan.firebaseio.com",
-    projectId: "dex-botryan",
-    storageBucket: "dex-botryan.appspot.com",
-    messagingSenderId: "318796750104",
-    appId: "1:318796750104:web:174eea50a0c1dec233d26d",
-    measurementId: "G-F8FM63MDKS"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
 };
 firebase.initializeApp(config);
 
